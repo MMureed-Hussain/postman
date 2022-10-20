@@ -1,0 +1,5030 @@
+{
+	"info": {
+		"_postman_id": "b0ccf51b-86e6-4482-bf44-9d5d9ccc9e46",
+		"name": "Social Media Task Making Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23513838-b0ccf51b-86e6-4482-bf44-9d5d9ccc9e46"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"id": "601c2ff1-c3d6-4fb9-bc73-92d8a09313ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "fakeone@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcd4321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registration",
+					"id": "a2c80610-821b-4ed3-af29-57a5b1869964",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|ob4QeI2YvkiPMhBcwt8tMO2uhPPnPJakzkXYXdaF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "fakeone",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "fakeone@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcd4321",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "abcd4321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "fb55b713-8fdf-4c49-bb0e-002f911c5735",
+							"name": "Registration",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|ob4QeI2YvkiPMhBcwt8tMO2uhPPnPJakzkXYXdaF",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "fakeone",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "fakeone@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "abcd4321",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "abcd4321",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:50:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:50:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"User successfully registered\",\n    \"user\": {\n        \"name\": \"faketwo\",\n        \"email\": \"faketwo@gmail.com\",\n        \"updated_at\": \"2022-10-19T22:50:35.000000Z\",\n        \"created_at\": \"2022-10-19T22:50:35.000000Z\",\n        \"id\": 2\n    },\n    \"token\": \"3|fmK4QjcItBc8yOIAMmhshBAEqSEokEmvHjPsQ3yj\"\n}"
+						}
+					]
+				}
+			],
+			"id": "a1fa5bc9-4139-407e-a585-9c1bade74027"
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "All Posts",
+					"id": "40f0e5ef-c220-4e3b-af1c-5a9b3799d43d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/posts/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b84276c3-4c76-4c69-8b35-5c591724b970",
+							"name": "All Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/posts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:27:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:27:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Post found.\",\n    \"data\": {\n        \"id\": 5,\n        \"user_id\": 8,\n        \"title\": \"#Hiring here\",\n        \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n        \"is_published\": 0,\n        \"created_at\": \"2022-10-17T02:36:26.000000Z\",\n        \"updated_at\": \"2022-10-17T02:36:26.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "aed9a69b-3a74-4020-9366-5c8c5f91ec96",
+							"name": "All Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/posts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:12:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:12:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post List\",\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": 12,\n                \"title\": \"#Errors\",\n                \"description\": \"cmd using\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T19:26:56.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 7,\n                        \"name\": \"1.PNG\",\n                        \"type\": \"image/png\",\n                        \"extension\": \"PNG\",\n                        \"url\": \"postMedia/TdlYgbteReRfade2ViFxZrIVcvTCrPESxHmX8p4W.png\",\n                        \"created_at\": \"2022-10-17T19:26:56.000000Z\"\n                    }\n                ],\n                \"comments\": [\n                    {\n                        \"id\": 3,\n                        \"description\": \"Thanks Its Very Useful my learning\",\n                        \"created_at\": \"2022-10-17T19:30:01.000000Z\",\n                        \"replies\": [\n                            {\n                                \"id\": 6,\n                                \"description\": \"okay and thanks very much\",\n                                \"created_at\": \"2022-10-17T19:44:40.000000Z\",\n                                \"replies\": []\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"id\": 11,\n                \"title\": \"#Interns Hiring\",\n                \"description\": \"NodeJs and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T19:25:26.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": [\n                    {\n                        \"id\": 2,\n                        \"description\": \"I am intrested in NodeJs But I have None experience\",\n                        \"created_at\": \"2022-10-17T19:29:14.000000Z\",\n                        \"replies\": [\n                            {\n                                \"id\": 5,\n                                \"description\": \"okay and thanks\",\n                                \"created_at\": \"2022-10-17T19:42:15.000000Z\",\n                                \"replies\": []\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"id\": 10,\n                \"title\": \"postman\",\n                \"description\": \"get,post,put,patch and apply others methods\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T19:23:08.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            },\n            {\n                \"id\": 9,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T18:05:33.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 6,\n                        \"name\": \"6.PNG\",\n                        \"type\": \"image/png\",\n                        \"extension\": \"PNG\",\n                        \"url\": \"postMedia/7AlWZ3Mz8Bia15qEV4fCN4Zz3PwPml22j9wpRGSU.png\",\n                        \"created_at\": \"2022-10-17T18:05:33.000000Z\"\n                    }\n                ],\n                \"comments\": []\n            },\n            {\n                \"id\": 8,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T03:06:46.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 5,\n                        \"name\": \"WIN_20221012_18_01_53_Pro.jpg\",\n                        \"type\": \"image/jpeg\",\n                        \"extension\": \"jpg\",\n                        \"url\": \"postMedia/TrTdrlNLAfEfaATBmcU0xEiOSvAnFXyRFF7U9vK9.jpg\",\n                        \"created_at\": \"2022-10-17T03:06:46.000000Z\"\n                    }\n                ],\n                \"comments\": [\n                    {\n                        \"id\": 1,\n                        \"description\": \"These post are feka plases away these kind of post be aware\",\n                        \"created_at\": \"2022-10-17T18:56:11.000000Z\",\n                        \"replies\": [\n                            {\n                                \"id\": 4,\n                                \"description\": \"okay and thanks\",\n                                \"created_at\": \"2022-10-17T19:40:15.000000Z\",\n                                \"replies\": []\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 6,\n                        \"description\": \"okay and thanks very much\",\n                        \"created_at\": \"2022-10-17T19:44:40.000000Z\",\n                        \"replies\": []\n                    }\n                ]\n            },\n            {\n                \"id\": 7,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T03:02:12.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"WIN_20221012_18_01_53_Pro.jpg\",\n                        \"type\": \"image/jpeg\",\n                        \"extension\": \"jpg\",\n                        \"url\": \"postMedia/h1cwq0V8bJI0TSRZltq8KGiidwTmKEO4TYKIw2Q4.jpg\",\n                        \"created_at\": \"2022-10-17T03:02:12.000000Z\"\n                    }\n                ],\n                \"comments\": []\n            },\n            {\n                \"id\": 6,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T03:01:50.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"WIN_20221012_18_01_53_Pro.jpg\",\n                        \"type\": \"image/jpeg\",\n                        \"extension\": \"jpg\",\n                        \"url\": \"postMedia/P3Rd3UpftxWHB1YK7zJHyu7KVQ2bH4oFoBz9aht4.jpg\",\n                        \"created_at\": \"2022-10-17T03:01:50.000000Z\"\n                    }\n                ],\n                \"comments\": []\n            },\n            {\n                \"id\": 5,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T02:36:26.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"WIN_20221012_18_01_53_Pro.jpg\",\n                        \"type\": \"image/jpeg\",\n                        \"extension\": \"jpg\",\n                        \"url\": \"postMedia/DIikUeypNMb4OoqNUEDrXJSWM4Ms9vb17cevlnXI.jpg\",\n                        \"created_at\": \"2022-10-17T02:36:26.000000Z\"\n                    }\n                ],\n                \"comments\": []\n            },\n            {\n                \"id\": 4,\n                \"title\": \"#Hiring here\",\n                \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T02:32:16.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"14.PNG\",\n                        \"type\": \"image/png\",\n                        \"extension\": \"PNG\",\n                        \"url\": \"postMedia/bJJ5e7sb07YOwa5X5u3Q3uylxz9iRCS5YzwZTuZi.png\",\n                        \"created_at\": \"2022-10-17T02:32:16.000000Z\"\n                    }\n                ],\n                \"comments\": []\n            },\n            {\n                \"id\": 2,\n                \"title\": \"#New Hiring\",\n                \"description\": \"also hr\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-17T02:30:26.000000Z\",\n                \"user\": {\n                    \"id\": 8,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8000/api/posts?page=2\"\n    }\n}"
+						},
+						{
+							"id": "dbeed66e-5282-4f5e-ac00-5bdab662d1ab",
+							"name": "All Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/posts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:32:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:32:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post List\",\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": 1,\n                \"title\": \"#Interns Hiring\",\n                \"description\": \"NodeJs and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:32:05.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            }\n        ],\n        \"next_page_url\": null\n    }\n}"
+						},
+						{
+							"id": "48a8cf5d-308f-4a95-8f21-80e2f4cdfa70",
+							"name": "All Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/posts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 17:58:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 17:58:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post List\",\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": 5,\n                \"title\": \"postmans\",\n                \"description\": \"get,post,put,patch and apply others methods etc\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:55:56.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"How to reduce a video file size.mp4\",\n                        \"type\": \"video/mp4\",\n                        \"extension\": \"mp4\",\n                        \"url\": \"postMedia/kuwdi6DW9smnufVURsbSFSSFIITspYtGFrvzos6D.mp4\",\n                        \"created_at\": \"2022-10-19T00:55:56.000000Z\"\n                    }\n                ],\n                \"comments\": [\n                    {\n                        \"id\": 2,\n                        \"description\": \"okay and thanks very much 5\",\n                        \"created_at\": \"2022-10-19T00:58:08.000000Z\",\n                        \"replies\": [\n                            {\n                                \"id\": 4,\n                                \"description\": \"okay and thanks very much 22\",\n                                \"created_at\": \"2022-10-19T00:58:53.000000Z\",\n                                \"replies\": []\n                            },\n                            {\n                                \"id\": 6,\n                                \"description\": \"okay and thanks very much 12\",\n                                \"created_at\": \"2022-10-19T00:59:22.000000Z\",\n                                \"replies\": []\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 5,\n                        \"description\": \"okay and thanks very much 1\",\n                        \"created_at\": \"2022-10-19T00:59:08.000000Z\",\n                        \"replies\": []\n                    },\n                    {\n                        \"id\": 6,\n                        \"description\": \"okay and thanks very much 12\",\n                        \"created_at\": \"2022-10-19T00:59:22.000000Z\",\n                        \"replies\": []\n                    }\n                ]\n            },\n            {\n                \"id\": 4,\n                \"title\": \"postmans\",\n                \"description\": \"get,post,put,patch and apply others methods etc\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:34:34.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            },\n            {\n                \"id\": 3,\n                \"title\": \"postmans\",\n                \"description\": \"get,post,put,patch and apply others methods etc\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:34:26.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            },\n            {\n                \"id\": 2,\n                \"title\": \"##Errors 123\",\n                \"description\": \"cmd using  dhfdjghdfj dfjdfh sjn\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:33:59.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"1.PNG\",\n                        \"type\": \"image/png\",\n                        \"extension\": \"PNG\",\n                        \"url\": \"postMedia/AaY2TPEr7jj7sbSk1Fyh3SiW0OSkZXUGNFZahfzF.png\",\n                        \"created_at\": \"2022-10-19T00:33:59.000000Z\"\n                    }\n                ],\n                \"comments\": [\n                    {\n                        \"id\": 1,\n                        \"description\": \"okay and thanks very much 3\",\n                        \"created_at\": \"2022-10-19T00:57:49.000000Z\",\n                        \"replies\": [\n                            {\n                                \"id\": 3,\n                                \"description\": \"okay and thanks very much\",\n                                \"created_at\": \"2022-10-19T00:58:37.000000Z\",\n                                \"replies\": []\n                            },\n                            {\n                                \"id\": 5,\n                                \"description\": \"okay and thanks very much 1\",\n                                \"created_at\": \"2022-10-19T00:59:08.000000Z\",\n                                \"replies\": []\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 3,\n                        \"description\": \"okay and thanks very much\",\n                        \"created_at\": \"2022-10-19T00:58:37.000000Z\",\n                        \"replies\": []\n                    },\n                    {\n                        \"id\": 4,\n                        \"description\": \"okay and thanks very much 22\",\n                        \"created_at\": \"2022-10-19T00:58:53.000000Z\",\n                        \"replies\": []\n                    }\n                ]\n            },\n            {\n                \"id\": 1,\n                \"title\": \"#Interns Hiring\",\n                \"description\": \"NodeJs and ReactJs\",\n                \"is_published\": 0,\n                \"created_at\": \"2022-10-19T00:32:05.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"fakeone\",\n                    \"email\": \"fakeone@gmail.com\",\n                    \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n                },\n                \"media\": [],\n                \"comments\": []\n            }\n        ],\n        \"next_page_url\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Posts",
+					"id": "8a2e3f7a-bdb7-45db-bcb7-e560d6580256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "#New Hiring",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "also hr",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "Put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/posts/25",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"25"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3576b698-3875-4fba-821a-d86ef77fdec5",
+							"name": "Update Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#New Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "also hr",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "Put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts/25",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"25"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post updated successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": 8,\n        \"title\": \"#New Hiring\",\n        \"description\": \"also hr\",\n        \"is_published\": 0,\n        \"created_at\": \"2022-10-17T02:30:26.000000Z\",\n        \"updated_at\": \"2022-10-17T18:18:50.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Posts",
+					"id": "d9dd9266-2fe0-494d-a7ee-2289c8ad46f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/posts/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"22"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "163a797a-d471-4847-a355-5229b086eef2",
+							"name": "Delete Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/posts/22",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"22"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:19:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:19:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post deleted successfully.\",\n    \"data\": {\n        \"id\": 3,\n        \"user_id\": 8,\n        \"title\": \"#Hiring here\",\n        \"description\": \"SEO,Laravel,NodeJs,Php and ReactJs\",\n        \"is_published\": 0,\n        \"created_at\": \"2022-10-17T02:31:49.000000Z\",\n        \"updated_at\": \"2022-10-17T02:31:49.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Text Post",
+					"id": "626d976a-2bdc-438d-b7fd-e63c4a2e08a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "#Interns Hiring",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "NodeJs and ReactJs",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "77444644-faea-4186-9708-745fb035bfa1",
+							"name": "Text Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#Interns Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "NodeJs and ReactJs",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "4",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:25:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:25:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"#Interns Hiring\",\n        \"description\": \"NodeJs and ReactJs\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-17T19:25:26.000000Z\",\n        \"user\": {\n            \"id\": 8,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n        },\n        \"media\": [],\n        \"comments\": []\n    }\n}"
+						},
+						{
+							"id": "7279c955-92eb-42f9-9d1b-28cbe9f1f390",
+							"name": "Text Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#Interns Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "NodeJs and ReactJs",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "4",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:32:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:32:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"#Interns Hiring\",\n        \"description\": \"NodeJs and ReactJs\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-19T00:32:05.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n        },\n        \"media\": [],\n        \"comments\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Media Image",
+					"id": "04f9a2c1-b784-4e0f-ad62-0df567eea3ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "I am intrested NodeJs Internship...",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"type": "file",
+									"src": "/C:/Users/Mphil-cs/Pictures/Camera Roll/10.PNG"
+								},
+								{
+									"key": "description",
+									"value": "djghfdg uerih tnvdg ughjn ",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "26",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "update image",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/posts/updateMedia/19",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"updateMedia",
+								"19"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "673c90e1-eda3-4466-aab7-8b44932ccd00",
+							"name": "Update Media Image",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "I am intrested NodeJs Internship...",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/10.PNG"
+											]
+										},
+										{
+											"key": "description",
+											"value": "djghfdg uerih tnvdg ughjn ",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "26",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "update image",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts/updateMedia/19",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"updateMedia",
+										"19"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 19:42:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 19:42:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Media Updated Successfully\",\n    \"data\": {\n        \"id\": 19,\n        \"post_id\": \"26\",\n        \"name\": \"update image\",\n        \"type\": \"image/png\",\n        \"extension\": \"PNG\",\n        \"url\": \"postMedia/GmQWukzB1TuRxf3c2xBex3eXNPQMqMsCXh3lnI3D.png\",\n        \"created_at\": \"2022-10-18T19:42:20.000000Z\",\n        \"updated_at\": \"2022-10-18T19:42:20.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "379ed198-cb6b-4eb0-bef9-70f16f48eb40"
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "All Commnets",
+					"id": "d646e049-153d-4581-941a-963d61f6c5ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "Thanks Its Very Useful my learning",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/comments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "I am intrested in Laravel Internship... ",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "bc35a496-6e72-40ff-9ef2-6a96bcd6fb61",
+							"name": "Commnet on Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/comments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "I am intrested in Laravel Internship... ",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:30:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:30:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 3,\n        \"description\": \"Thanks Its Very Useful my learning\",\n        \"created_at\": \"2022-10-17T19:30:01.000000Z\",\n        \"replies\": []\n    }\n}"
+						},
+						{
+							"id": "be90c000-f496-4548-94ac-59d4794ae9d1",
+							"name": "All Commnets",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/comments?text=I am intrested in Laravel Internship... ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "I am intrested in Laravel Internship... ",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:15:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:15:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment List\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"description\": \"These post are feka plases away these kind of post be aware\",\n            \"created_at\": \"2022-10-17T18:56:11.000000Z\",\n            \"replies\": [\n                {\n                    \"id\": 4,\n                    \"description\": \"okay and thanks\",\n                    \"created_at\": \"2022-10-17T19:40:15.000000Z\",\n                    \"replies\": []\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"description\": \"I am intrested in NodeJs But I have None experience\",\n            \"created_at\": \"2022-10-17T19:29:14.000000Z\",\n            \"replies\": [\n                {\n                    \"id\": 5,\n                    \"description\": \"okay and thanks\",\n                    \"created_at\": \"2022-10-17T19:42:15.000000Z\",\n                    \"replies\": []\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"description\": \"Thanks Its Very Useful my learning\",\n            \"created_at\": \"2022-10-17T19:30:01.000000Z\",\n            \"replies\": [\n                {\n                    \"id\": 6,\n                    \"description\": \"okay and thanks very much\",\n                    \"created_at\": \"2022-10-17T19:44:40.000000Z\",\n                    \"replies\": []\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"description\": \"okay and thanks\",\n            \"created_at\": \"2022-10-17T19:40:15.000000Z\",\n            \"replies\": []\n        },\n        {\n            \"id\": 5,\n            \"description\": \"okay and thanks\",\n            \"created_at\": \"2022-10-17T19:42:15.000000Z\",\n            \"replies\": []\n        }\n    ]\n}"
+						},
+						{
+							"id": "c2565f5c-34f5-4d91-8cfc-bc2ab2efaf0c",
+							"name": "All Commnets",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/comments?text=I am intrested in Laravel Internship... ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "I am intrested in Laravel Internship... ",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 19:43:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 19:43:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment List\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"post_id\": 2,\n            \"parent_id\": null,\n            \"description\": \"okay and thanks very much 3\",\n            \"created_at\": \"2022-10-19T00:57:49.000000Z\",\n            \"updated_at\": \"2022-10-19T00:57:49.000000Z\",\n            \"replies_count\": 2\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 1,\n            \"post_id\": 5,\n            \"parent_id\": null,\n            \"description\": \"okay and thanks very much 5\",\n            \"created_at\": \"2022-10-19T00:58:08.000000Z\",\n            \"updated_at\": \"2022-10-19T00:58:08.000000Z\",\n            \"replies_count\": 2\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 1,\n            \"post_id\": 2,\n            \"parent_id\": 1,\n            \"description\": \"okay and thanks very much\",\n            \"created_at\": \"2022-10-19T00:58:37.000000Z\",\n            \"updated_at\": \"2022-10-19T00:58:37.000000Z\",\n            \"replies_count\": 0\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 1,\n            \"post_id\": 2,\n            \"parent_id\": 2,\n            \"description\": \"okay and thanks very much 22\",\n            \"created_at\": \"2022-10-19T00:58:53.000000Z\",\n            \"updated_at\": \"2022-10-19T00:58:53.000000Z\",\n            \"replies_count\": 0\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 1,\n            \"post_id\": 5,\n            \"parent_id\": 1,\n            \"description\": \"okay and thanks very much 1\",\n            \"created_at\": \"2022-10-19T00:59:08.000000Z\",\n            \"updated_at\": \"2022-10-19T00:59:08.000000Z\",\n            \"replies_count\": 0\n        },\n        {\n            \"id\": 6,\n            \"user_id\": 1,\n            \"post_id\": 5,\n            \"parent_id\": 2,\n            \"description\": \"okay and thanks very much 12\",\n            \"created_at\": \"2022-10-19T00:59:22.000000Z\",\n            \"updated_at\": \"2022-10-19T00:59:22.000000Z\",\n            \"replies_count\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Comment on Comment",
+					"id": "7407c3e3-5db8-4ad2-8a9b-07fe86e3515c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "okay and thanks very much 12",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/comments/replies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments",
+								"replies"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "5c6e1dfb-fb7f-4ac0-af70-21e22264993b",
+							"name": "Comment on Comment",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 12",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments/replies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										"replies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:44:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:44:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 6,\n        \"description\": \"okay and thanks very much\",\n        \"created_at\": \"2022-10-17T19:44:40.000000Z\",\n        \"replies\": []\n    }\n}"
+						},
+						{
+							"id": "7753c6f1-734b-4b80-bd45-cf14b1b6b938",
+							"name": "Comment on Comment",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 12",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments/replies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										"replies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:48:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:48:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 8,\n        \"description\": \"okay and thanks very much\",\n        \"created_at\": \"2022-10-18T21:48:44.000000Z\",\n        \"replies\": []\n    }\n}"
+						},
+						{
+							"id": "fa67f4c4-b66d-45b9-891a-5f84df9fe2e8",
+							"name": "Comment on Comment",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 12",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments/replies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										"replies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 22:12:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 22:12:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 14,\n        \"description\": \"okay and thanks very much\",\n        \"created_at\": \"2022-10-18T22:12:34.000000Z\",\n        \"replies\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Comment on Post",
+					"id": "ef4e3fe5-50f0-4b2f-ac8c-081366907216",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "okay and thanks very much 5",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/comments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "32103b9b-9039-4e31-a58a-7b5a5d65e6c9",
+							"name": "Comment on Comment",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 5",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:44:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:44:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 6,\n        \"description\": \"okay and thanks very much\",\n        \"created_at\": \"2022-10-17T19:44:40.000000Z\",\n        \"replies\": []\n    }\n}"
+						},
+						{
+							"id": "474803a0-69d3-428e-b9d7-37a450d3d634",
+							"name": "Comment on Comment",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 5",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:48:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:48:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 8,\n        \"description\": \"okay and thanks very much\",\n        \"created_at\": \"2022-10-18T21:48:44.000000Z\",\n        \"replies\": []\n    }\n}"
+						},
+						{
+							"id": "418388f8-55b7-46df-8aaf-875aea19c688",
+							"name": "Comment on Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "okay and thanks very much 5",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/comments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 22:11:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 22:11:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Comment created successfully.\",\n    \"data\": {\n        \"id\": 11,\n        \"description\": \"okay and thanks very much 3\",\n        \"created_at\": \"2022-10-18T22:11:40.000000Z\",\n        \"replies\": []\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "87ccd080-e897-410e-bb00-185ee47ae7a9"
+		},
+		{
+			"name": "Media",
+			"item": [
+				{
+					"name": "Media Delete",
+					"id": "73c46a4c-267c-4766-b3bd-77b3014dffd2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/medias/25",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medias",
+								"25"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "13237902-4341-4d30-bb18-351be5568888",
+							"name": "Mrdia Delete",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medias/25",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medias",
+										"25"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:47:32 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:47:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post deleted successfully.\",\n    \"data\": {\n        \"id\": 25,\n        \"post_id\": 34,\n        \"name\": \"3.PNG\",\n        \"type\": \"image/png\",\n        \"extension\": \"PNG\",\n        \"url\": \"postMedia/V4TrX94SgwvuDdPUlflKgDGRHvoMsAfGdAVYPp1U.png\",\n        \"created_at\": \"2022-10-18T21:43:23.000000Z\",\n        \"updated_at\": \"2022-10-18T21:43:23.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Image Posts",
+					"id": "39d9e117-fff2-40f6-bd39-9be286852fe1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "##Errors 123",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "cmd using  dhfdjghdfj dfjdfh sjn",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"type": "file",
+									"src": "/C:/Users/Mphil-cs/Pictures/Camera Roll/1.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "41e31fff-812a-4d18-a955-474435842acc",
+							"name": "Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "##Errors 123",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "cmd using  dhfdjghdfj dfjdfh sjn",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/1.PNG"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:26:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:26:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 12,\n        \"title\": \"#Errors\",\n        \"description\": \"cmd using\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-17T19:26:56.000000Z\",\n        \"user\": {\n            \"id\": 8,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n        },\n        \"media\": [\n            {\n                \"id\": 7,\n                \"name\": \"1.PNG\",\n                \"type\": \"image/png\",\n                \"extension\": \"PNG\",\n                \"url\": \"postMedia/TdlYgbteReRfade2ViFxZrIVcvTCrPESxHmX8p4W.png\",\n                \"created_at\": \"2022-10-17T19:26:56.000000Z\"\n            }\n        ],\n        \"comments\": []\n    }\n}"
+						},
+						{
+							"id": "cbf00128-3446-4cd6-9a43-b6cddf60c6dd",
+							"name": "Image Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "##Errors 123",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "cmd using  dhfdjghdfj dfjdfh sjn",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/1.PNG"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:33:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:33:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"##Errors 123\",\n        \"description\": \"cmd using  dhfdjghdfj dfjdfh sjn\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-19T00:33:59.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n        },\n        \"media\": [\n            {\n                \"id\": 1,\n                \"name\": \"1.PNG\",\n                \"type\": \"image/png\",\n                \"extension\": \"PNG\",\n                \"url\": \"postMedia/AaY2TPEr7jj7sbSk1Fyh3SiW0OSkZXUGNFZahfzF.png\",\n                \"created_at\": \"2022-10-19T00:33:59.000000Z\"\n            }\n        ],\n        \"comments\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Video",
+					"id": "52c1e326-051a-443f-b2e9-5aecc016e250",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"type": "text",
+									"value": "postmans"
+								},
+								{
+									"key": "description",
+									"value": "get,post,put,patch and apply others methods etc",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"type": "file",
+									"src": "/C:/Users/Mphil-cs/Downloads/Video/How to reduce a video file size.mp4"
+								},
+								{
+									"key": "post_id",
+									"value": "38",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "79edf5bb-31d0-4a70-89ce-ba1ae44348cf",
+							"name": "Post Video",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"type": "text",
+											"value": "postmans"
+										},
+										{
+											"key": "description",
+											"value": "get,post,put,patch and apply others methods etc",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Downloads/Video/How to reduce a video file size.mp4"
+											]
+										},
+										{
+											"key": "post_id",
+											"value": "38",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:23:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 19:23:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 10,\n        \"title\": \"postman\",\n        \"description\": \"get,post,put,patch and apply others methods\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-17T19:23:08.000000Z\",\n        \"user\": {\n            \"id\": 8,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n        },\n        \"media\": [],\n        \"comments\": []\n    }\n}"
+						},
+						{
+							"id": "b51d371b-21de-4bbd-8298-cd930b554b8a",
+							"name": "Post Video",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"type": "text",
+											"value": "postmans"
+										},
+										{
+											"key": "description",
+											"value": "get,post,put,patch and apply others methods etc",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Downloads/Video/How to reduce a video file size.mp4"
+											]
+										},
+										{
+											"key": "post_id",
+											"value": "38",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:27:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:27:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 15,\n        \"title\": \"postman\",\n        \"description\": \"get,post,put,patch and apply others methods\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-17T21:27:58.000000Z\",\n        \"user\": {\n            \"id\": 8,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-17T00:00:05.000000Z\"\n        },\n        \"media\": [\n            {\n                \"id\": 8,\n                \"name\": \"How to reduce a video file size.mp4\",\n                \"type\": \"video/mp4\",\n                \"extension\": \"mp4\",\n                \"url\": \"postMedia/8ROAbv0U7Qfw8qh7Cbyyx00sw2D0Rb1OamiuC9BD.mp4\",\n                \"created_at\": \"2022-10-17T21:27:59.000000Z\"\n            }\n        ],\n        \"comments\": []\n    }\n}"
+						},
+						{
+							"id": "4f8c0a16-fb98-4127-9ae6-070c9bd1bc03",
+							"name": "Post Video",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"type": "text",
+											"value": "postmans"
+										},
+										{
+											"key": "description",
+											"value": "get,post,put,patch and apply others methods etc",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Downloads/Video/How to reduce a video file size.mp4"
+											]
+										},
+										{
+											"key": "post_id",
+											"value": "38",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:55:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 00:55:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully.\",\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"postmans\",\n        \"description\": \"get,post,put,patch and apply others methods etc\",\n        \"is_published\": null,\n        \"created_at\": \"2022-10-19T00:55:56.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"fakeone\",\n            \"email\": \"fakeone@gmail.com\",\n            \"created_at\": \"2022-10-19T00:29:58.000000Z\"\n        },\n        \"media\": [\n            {\n                \"id\": 2,\n                \"name\": \"How to reduce a video file size.mp4\",\n                \"type\": \"video/mp4\",\n                \"extension\": \"mp4\",\n                \"url\": \"postMedia/kuwdi6DW9smnufVURsbSFSSFIITspYtGFrvzos6D.mp4\",\n                \"created_at\": \"2022-10-19T00:55:56.000000Z\"\n            }\n        ],\n        \"comments\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Media Update Post",
+					"id": "7ec08507-53a6-4354-9f35-47ad33c31d05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "#New Hiring",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "also hr and much more",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"type": "file",
+									"src": "/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+								},
+								{
+									"key": "_method",
+									"type": "text",
+									"value": "PUT"
+								},
+								{
+									"key": "post_id",
+									"value": "36",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/medias/27",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medias",
+								"27"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "61cfb9a0-424a-4dfa-8091-39f96534b4f1",
+							"name": "Update Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#New Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "also hr and much more",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+											]
+										},
+										{
+											"key": "_method",
+											"type": "text",
+											"value": "PUT"
+										},
+										{
+											"key": "post_id",
+											"value": "36",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medias/27",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medias",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post updated successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": 8,\n        \"title\": \"#New Hiring\",\n        \"description\": \"also hr\",\n        \"is_published\": 0,\n        \"created_at\": \"2022-10-17T02:30:26.000000Z\",\n        \"updated_at\": \"2022-10-17T18:18:50.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "997811d3-7540-4adc-9cc7-061568fa21f8",
+							"name": "Media Update Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#New Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "also hr and much more",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+											]
+										},
+										{
+											"key": "_method",
+											"type": "text",
+											"value": "PUT"
+										},
+										{
+											"key": "post_id",
+											"value": "36",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medias/27",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medias",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:58:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:58:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Media Updated Successfully\",\n    \"data\": {\n        \"id\": 27,\n        \"post_id\": \"36\",\n        \"name\": \"4.PNG\",\n        \"type\": \"image/png\",\n        \"extension\": \"PNG\",\n        \"url\": \"postMedia/sjVfmGsk7a6K6ji1BbYReeFp9uHR1geBc0UIMwZA.png\",\n        \"created_at\": \"2022-10-18T21:58:14.000000Z\",\n        \"updated_at\": \"2022-10-18T21:58:14.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "All Media Posts",
+					"id": "16167378-ff15-49c3-92b4-47101fddedd5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "#New Hiring",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "also hr and much more",
+									"type": "text"
+								},
+								{
+									"key": "media",
+									"type": "file",
+									"src": "/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+								},
+								{
+									"key": "_method",
+									"type": "text",
+									"value": "PUT"
+								},
+								{
+									"key": "post_id",
+									"value": "36",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/medias/27",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medias",
+								"27"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "6d9ebbf3-39aa-4788-ad2d-45a8c6511a37",
+							"name": "Update Posts",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#New Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "also hr and much more",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+											]
+										},
+										{
+											"key": "_method",
+											"type": "text",
+											"value": "PUT"
+										},
+										{
+											"key": "post_id",
+											"value": "36",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medias/27",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medias",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 18:18:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post updated successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": 8,\n        \"title\": \"#New Hiring\",\n        \"description\": \"also hr\",\n        \"is_published\": 0,\n        \"created_at\": \"2022-10-17T02:30:26.000000Z\",\n        \"updated_at\": \"2022-10-17T18:18:50.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "c5c03291-8ba9-4e94-9f8c-6764200ccf5b",
+							"name": "Media Update Post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "#New Hiring",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "also hr and much more",
+											"type": "text"
+										},
+										{
+											"key": "media",
+											"type": "file",
+											"src": [
+												"/C:/Users/Mphil-cs/Pictures/Camera Roll/8.PNG"
+											]
+										},
+										{
+											"key": "_method",
+											"type": "text",
+											"value": "PUT"
+										},
+										{
+											"key": "post_id",
+											"value": "36",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medias/27",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medias",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:58:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Oct 2022 21:58:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Media Updated Successfully\",\n    \"data\": {\n        \"id\": 27,\n        \"post_id\": \"36\",\n        \"name\": \"4.PNG\",\n        \"type\": \"image/png\",\n        \"extension\": \"PNG\",\n        \"url\": \"postMedia/sjVfmGsk7a6K6ji1BbYReeFp9uHR1geBc0UIMwZA.png\",\n        \"created_at\": \"2022-10-18T21:58:14.000000Z\",\n        \"updated_at\": \"2022-10-18T21:58:14.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "2045866e-71d2-486a-94ee-8a12db46deb3"
+		},
+		{
+			"name": "Likes on Posts",
+			"item": [
+				{
+					"name": "like on post",
+					"id": "5d22ed27-1a08-4689-ba62-5b7922ab7e88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "like_on_post",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/likes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b40592ca-6b54-49f4-a597-02298072cb85",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/likes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Like created successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": \"1\",\n        \"post_id\": \"2\",\n        \"created_at\": \"2022-10-19T22:30:40.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "fe58b60f-8c56-443a-bf5e-42aa1656a1b1",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/likes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"User Already Exist.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "like on post",
+					"id": "e55d288b-0cb3-461e-bced-7b9ebb809bba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "like_on_post",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/likes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "740a3123-7474-49bb-afb1-50007d3b734f",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "like_on_post",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/likes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Like created successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": \"1\",\n        \"post_id\": \"2\",\n        \"created_at\": \"2022-10-19T22:30:40.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "0de40564-2cfb-4275-bf1c-c2eb878e56ac",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "like_on_post",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/likes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"User Already Exist.\"\n}"
+						},
+						{
+							"id": "cd9c3b29-f9c3-4082-851a-4c8eed53f69d",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "like_on_post",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/likes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 19:28:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 19:28:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Like created successfully.\",\n    \"data\": {\n        \"id\": 12,\n        \"user_id\": \"1\",\n        \"post_id\": \"5\",\n        \"created_at\": \"2022-10-20T19:28:07.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "600ca3ee-8360-49ee-bac7-b4784b79cf02"
+		},
+		{
+			"name": "DisLikes on Posts",
+			"item": [
+				{
+					"name": "like on post",
+					"id": "d81f4dc0-5230-4c39-a537-3cb93c26bcbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "post_id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/dislikes/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dislikes",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7c9b1d31-2619-4bf3-9aa6-f918eb930e70",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/dislikes/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dislikes",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:30:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Like created successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"user_id\": \"1\",\n        \"post_id\": \"2\",\n        \"created_at\": \"2022-10-19T22:30:40.000000Z\"\n    }\n}"
+						},
+						{
+							"id": "a5ab2b76-3f3c-45e2-afaf-9874217c27ee",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/dislikes/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dislikes",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Oct 2022 22:31:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"User Already Exist.\"\n}"
+						},
+						{
+							"id": "24860149-cfdf-4aba-8346-71cb2c896489",
+							"name": "like on post",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/dislikes/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dislikes",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 18:49:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Oct 2022 18:49:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Like created successfully.\"\n}"
+						}
+					]
+				}
+			],
+			"id": "634c1d1b-ef4c-4e73-bb30-6f96f4971b3c"
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/commnets",
+			"id": "69782d79-f001-4eca-8871-0cca9c05f8f7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|ob4QeI2YvkiPMhBcwt8tMO2uhPPnPJakzkXYXdaF",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "very nice",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/commnets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"commnets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

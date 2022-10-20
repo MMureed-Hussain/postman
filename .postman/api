@@ -4,6 +4,7 @@ id = 7c6937fd-c81e-41b0-b864-70328fb614fc
 
 [relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"23513838-b0ccf51b-86e6-4482-bf44-9d5d9ccc9e46","path":"Social Media Task Making Api.json","metaData":{}}
 
 [relations.collections.metaData]
 
